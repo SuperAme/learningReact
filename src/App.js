@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
-import MiComponente from './components/MiComponente';
+import Header from './components/Header';
+import Slider from './components/Slider';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import SeccionPruebas from './components/SeccionPruebas';
 
 function App() {
-  var nombre = "AMQ";
-  var presentacion = <h2>Hola, yo soy {nombre}</h2>
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola Américo
-        </p>
-        {
-          presentacion
-        }
-        <section className="componentes">
-          <MiComponente/>
-        </section>
-      </header>
-      
+      <Header />
+      <Slider />
+      <div className="center">
+        <SeccionPruebas/>
+        <Sidebar />
+        <div className="clearfix"></div>
+      </div>
+      <Footer/>
     </div>
   );
 }
